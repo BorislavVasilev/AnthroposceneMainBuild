@@ -21,6 +21,17 @@ public class SwipeDetector : MonoBehaviour, IInputDetector
     {
         if (state == State.SwipeNotStarted)
         {
+            //Touch touch = Input.GetTouch(0);
+            //if(touch.phase == TouchPhase.Began)
+            //{
+            //    // start of swipe
+            //}
+            //if (touch.phase == TouchPhase.Ended)
+            //{
+            //    // End of swipe
+            //}
+
+
             if (Input.GetMouseButtonDown(0))
             {
                 timeSwipeStarted = DateTime.Now;
