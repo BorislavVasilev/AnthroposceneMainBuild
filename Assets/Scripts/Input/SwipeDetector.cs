@@ -30,7 +30,7 @@ public class SwipeDetector : MonoBehaviour, IInputDetector
             //{
             //    // End of swipe
             //}
-
+            
 
             if (Input.GetMouseButtonDown(0))
             {
