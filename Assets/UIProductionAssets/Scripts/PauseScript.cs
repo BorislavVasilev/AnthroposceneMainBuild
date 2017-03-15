@@ -24,6 +24,7 @@ public class PauseScript : MonoBehaviour {
         if (!pause)
         {
             Time.timeScale = 1;
+            
             pauseMenu.SetActive(false);
             pauseButton.SetActive(true);
             settingsButton.SetActive(true);
