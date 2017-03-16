@@ -3,11 +3,17 @@ using System.Collections;
 
 public class TimeDestroyer : MonoBehaviour
 {
+    bool destroying = false;
 
     // Use this for initialization
-    void Start()
+    void Update()
     {
-        Invoke("DestroyObject", LifeTime);
+        if(GameManager.Instance.GameState == GameState.Playing && destroying == false)
+        {
+            Invoke("DestroyObject", LifeTime);
+            destroying = true;
+        }
+        
     }
 
 
