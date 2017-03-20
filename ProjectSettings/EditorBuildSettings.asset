@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/NewUIDevelopment.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LoadingScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/straightPathsLevel.unity
