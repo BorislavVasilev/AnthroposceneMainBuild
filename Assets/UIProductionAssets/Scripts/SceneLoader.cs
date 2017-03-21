@@ -20,14 +20,23 @@ public class SceneLoader : MonoBehaviour {
         // Load level async
         yield return SceneManager.LoadSceneAsync(sceneName);
 
+        Debug.Log(endTime);
+        Debug.Log(Time.time);
         if (Time.time < endTime)
-
+        {
             yield return new WaitForSeconds(endTime - Time.time);
+        }
+
 
         // !!! unload loading screen
         SceneManager.UnloadSceneAsync("LoadingScene");
 
         
+    }
+
+    public void LoadSceneMethod(string sceneName)
+    {
+        StartCoroutine("LoadScene", sceneName);
     }
 
     public void Start()
