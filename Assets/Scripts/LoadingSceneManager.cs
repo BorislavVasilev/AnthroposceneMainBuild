@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-public class LoadingSceneManager : MonoBehaviour {
+public class LoadingSceneManager : MonoBehaviour
+{
 
 	// Use this for initialization
 	void Start () {
@@ -33,7 +34,7 @@ public class LoadingSceneManager : MonoBehaviour {
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
         GameObject canvasReferance = GameObject.Find("RunnerGameCanvas");
-        canvasReferance.SetActive(false);
+        canvasReferance.GetComponent<Canvas>().targetDisplay = 10;
 
         if (Time.time < endTime) yield return new WaitForSeconds(endTime - Time.time);
 
@@ -41,6 +42,7 @@ public class LoadingSceneManager : MonoBehaviour {
         SceneManager.UnloadSceneAsync("LoadingScene");
         //LoadingSceneManager.UnloadLoadingScene();
 
-        canvasReferance.SetActive(true);
+        // canvasReferance.SetActive(true);
+        canvasReferance.GetComponent<Canvas>().targetDisplay = 0;
     }
 }

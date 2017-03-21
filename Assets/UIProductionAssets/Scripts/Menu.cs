@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
+    public bool visibleOnStartup;
+
     private Animator animator;
     private CanvasGroup canvasGroup;
 
@@ -17,6 +19,11 @@ public class Menu : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         canvasGroup = GetComponent<CanvasGroup>();
+
+        if (visibleOnStartup)
+        {
+            animator.SetTrigger("ShowMenuTrigger");
+        }
 
         //var rect = GetComponent<RectTransform>();
         //rect.offsetMax = rect.offsetMin = new Vector2(10f, 0f);
