@@ -78,7 +78,7 @@ public class CharacterSidewaysMovement : MonoBehaviour
                 }
 
                 //move the player
-                controller.Move(moveDirection * Time.deltaTime);
+                controller.Move(moveDirection * Time.deltaTime*1.5f);
 
                 break;
             case GameState.Dead:
