@@ -49,7 +49,7 @@ public class StuffSpawner : MonoBehaviour
         if (RandomX) //true on the wide path, false on the rotated ones
             position += new Vector3(Random.Range(minX, maxX), 0, 0);
 
-        Instantiate(prefab, position, Quaternion.identity);
+		Instantiate (prefab, position, Quaternion.Euler (0, 90, 0));
     }
 
 
