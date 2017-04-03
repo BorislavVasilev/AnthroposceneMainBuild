@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 114319912040918648}
   - component: {fileID: 114207005836878266}
   - component: {fileID: 65806801835165864}
+  - component: {fileID: 114499541060376514}
   m_Layer: 0
   m_Name: Bus3DModel
   m_TagString: Untagged
@@ -252,7 +253,7 @@ Transform:
   m_GameObject: {fileID: 1533781479295210}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -10.201349, y: 5.251773, z: -4.9034357}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.3, y: 0.5, z: 0.3}
   m_Children:
   - {fileID: 4377774120751888}
   - {fileID: 4345886272266928}
@@ -647,3 +648,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LifeTime: 5
+--- !u!114 &114499541060376514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1533781479295210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d01218b037c14900a1233fff9dde2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
